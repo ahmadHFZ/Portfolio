@@ -7,12 +7,12 @@ export async function POST(req: Request) {
     apiKey: process.env.MJ_APIKEY_PUBLIC,
     apiSecret: process.env.MJ_APIKEY_PRIVATE,
   });
-  
-  const { email, subject, name, message,service,budget } = await req.json();
+
+  const { email, subject, name, message, service, budget } = await req.json();
 
   try {
     // Attempt to send the email
-    const result = await mailjet.post("send", { version: 'v3.1' }).request({
+    const result = await mailjet.post("send", { version: "v3.1" }).request({
       Messages: [
         {
           From: {
@@ -21,7 +21,7 @@ export async function POST(req: Request) {
           },
           To: [
             {
-              Email: "samkazah444@gmail.com",
+              Email: "ahmad123alhafz@gmail.com",
               Name: "me",
             },
           ],
@@ -32,19 +32,24 @@ export async function POST(req: Request) {
       ],
     });
 
-    return NextResponse.json({ status: 'Email sent successfully!', result:result.body });
-    
-  } catch (error:any) {
-    console.error('Error details:', error);  // Log the full error for server-side debugging
+    return NextResponse.json({
+      status: "Email sent successfully!",
+      result: result.body,
+    });
+  } catch (error: any) {
+    console.error("Error details:", error); // Log the full error for server-side debugging
 
     // Extract the error message and status code (if available)
-    const errorMessage = error?.message || 'Unknown error occurred';
+    const errorMessage = error?.message || "Unknown error occurred";
     const errorStatusCode = error?.statusCode || 500;
 
     // Return only the simplified error details, not the entire object
-    return NextResponse.json({
-      error: 'Error sending email',
-      message: errorMessage,
-    }, { status: errorStatusCode });
+    return NextResponse.json(
+      {
+        error: "Error sending email",
+        message: errorMessage,
+      },
+      { status: errorStatusCode },
+    );
   }
 }

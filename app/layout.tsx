@@ -19,8 +19,8 @@ const PixelFont = Pixelify_Sans({
   variable: "--font-pixel)",
 });
 export const metadata: Metadata = {
-  title: "Sami Kazah",
-  description: "Sami Kazah Official Portfoilo",
+  title: "Ahmad Alhafez",
+  description: "Ahmad Alhafez Official Portfoilo",
 };
 
 export default function RootLayout({
@@ -34,7 +34,7 @@ export default function RootLayout({
         className={cn(
           MainFont.className,
           OswaldFont.variable,
-          PixelFont.variable
+          PixelFont.variable,
         )}
       >
         <GrainEFfect></GrainEFfect>

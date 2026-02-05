@@ -52,21 +52,21 @@ export default function ContactSection() {
       if (res.ok) {
         router.push(
           `/?show=true&title=Message Sent&message=${encodeURIComponent(
-            "Your message has been sent successfully!"
-          )}`
+            "Your message has been sent successfully!",
+          )}`,
         );
       } else {
         router.push(
           `/?show=true&title=Error&message=${encodeURIComponent(
-            data.message || "Something went wrong"
-          )}`
+            data.message || "Something went wrong",
+          )}`,
         );
       }
     } catch (error: any) {
       router.push(
         `/?show=true&title=Error&message=${encodeURIComponent(
-          error.message || "Unexpected error"
-        )}`
+          error.message || "Unexpected error",
+        )}`,
       );
     }
   };
@@ -93,13 +93,13 @@ export default function ContactSection() {
               icon={<MdEmail className="fill-[#333] text-lg" />}
               text={
                 <div className=" flex flex-col gap-y-4 ">
-                  <p> samkazah444@gmail.com</p>{" "}
+                  <p> ahmad123alhafz@gmail.com</p>{" "}
                   <Link
                     className=" cursor-pointer"
-                    href="https://linkedin.com/in/sami-kazah-6aa67648/"
+                    href="https://www.linkedin.com/in/ahmad-alhafez-62631a215/"
                   >
                     {" "}
-                    linkedin/sami-kazah-6aa67648
+                    https://www.linkedin.com/in/ahmad-alhafez-62631a215/
                   </Link>
                 </div>
               }
