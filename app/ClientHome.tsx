@@ -92,7 +92,7 @@ export default function ClientHome({ projects, skills, profile, photos, books, e
                   >
 
                      <Typography variant="h2" className="font-bold mb-2 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent leading-tight">
-                        {getLocalized(profile, 'name') || profile?.name || "Sami Kazah"}
+                        {getLocalized(profile, 'name') || profile?.name || "Ahmad Alhafez"}
                      </Typography>
                      <Typography variant="h4" className="text-gray-200 mb-6 font-light">
                         {getTitle()}
@@ -479,7 +479,7 @@ export default function ClientHome({ projects, skills, profile, photos, books, e
            <Button 
               variant="contained" 
               size="large"
-              href={`mailto:samkazah444@gmail.com`}
+              href={`mailto:ahmad123alhafz@gmail.com`}
               startIcon={<FaEnvelope />}
               className="bg-purple-600 hover:bg-purple-700 text-white font-bold px-12 py-4 rounded-full text-lg"
               sx={{ '& .MuiButton-startIcon': { marginRight: dir === 'rtl' ? 0 : '8px', marginLeft: dir === 'rtl' ? '8px' : 0 } }}
